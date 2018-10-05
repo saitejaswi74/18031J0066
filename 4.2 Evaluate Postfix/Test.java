@@ -8,31 +8,24 @@ class Main1
 	{
 		Scanner sc=new Scanner(System.in);
 		String s=sc.next();
-		Solution obj=new Solution();
-		System.out.println(obj.evaluatePostfix(s));;
+		//String[] s1=s.split("");
+		Test t=new Test();
+		System.out.println(t.evaluatePostfix(s));;
 	}
 }
   
-class Solution 
+class Test  
 { 
-    // Method to evaluate value of a postfix expression 
     static int evaluatePostfix(String exp) 
     { 
-        //create a stack 
+    	String[] s1=exp.split(" ");
+    	int l=s1.length;
         Stack<Integer> stack=new Stack<>(); 
-          
-        // Scan all characters one by one 
-        for(int i=0;i<exp.length();i++) 
+        for(int i=0;i<l;i++) 
         { 
             char c=exp.charAt(i); 
-              
-            // If the scanned character is an operand (number here), 
-            // push it to the stack. 
             if(Character.isDigit(c)) 
-            stack.push(c - '0'); 
-              
-            //  If the scanned character is an operator, pop two 
-            // elements from stack apply the operator 
+            	stack.push(c - '0'); 
             else
             { 
                 int val1 = stack.pop(); 
