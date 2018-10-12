@@ -1,5 +1,8 @@
+
+
 import java.util.Scanner;
-class Deque1 
+
+class Dequeue
 {
 	int size;
 	Node front,rear;
@@ -13,7 +16,7 @@ class Deque1
 			next = link;
 		}
 	}
-	Deque1()
+	Dequeue()
 	{
 		size=0;
 		front=null;
@@ -52,8 +55,8 @@ class Deque1
 	{
 		if(front != null)
 		{
-			Node pn=rear;
-			rear=rear.next;
+			Node pn=front;
+			front=front.next;
 			pn.data=null;
 			pn.next=null;
 			size--;
@@ -106,55 +109,55 @@ class Deque1
 class Solution
 {
 	 
-    public static void main(final String[] args)
+    public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
         sc.nextLine();
-        Deque1 d=new Deque1();
+        Dequeue d=new Dequeue();
         for(int i=0;i<n;i++)
         {
             String input[] = sc.nextLine().split(" ");
             switch (input[0]) 
             {
-            case "pushLeft":
-                d.pushLeft(input[1]);
-                System.out.println(d.display());
-                break;
-            case "pushRight":
-                d.pushRight(input[1]);
-                System.out.println(d.display());
-                break;
-            case "popLeft":
-                if(!d.isEmty()) 
-                {
-                    d.popLeft();
-                    System.out.println(d.display());
-                } 
-                else 
-                {
-                    System.out.println("Deck is empty");
-                }
-                break;
-            case "popRight":
-                if (!d.isEmty())
-                {
-                    d.popRight();
-                    System.out.println(d.display());
-                } 
-                else
-                {
-                    System.out.println("Deck is empty");
-                }
-                break;
-            case "size":
-                System.out.println(d.size());
-                break;
-            case "isEmpty":
-                System.out.println(d.isEmty());
-                break;
-            default:
-                break;
+	            case "pushLeft":
+	                d.pushLeft(input[1]);
+	                System.out.println(d.display());
+	                break;
+	            case "pushRight":
+	                d.pushRight(input[1]);
+	                System.out.println(d.display());
+	                break;
+	            case "popLeft":
+	                if(!d.isEmty()) 
+	                {
+	                    d.popLeft();
+	                    System.out.println(d.display());
+	                } 
+	                else 
+	                {
+	                    System.out.println("Deck is empty");
+	                }
+	                break;
+	            case "popRight":
+	                if (!d.isEmty())
+	                {
+	                    d.popRight();
+	                    System.out.println(d.display());
+	                } 
+	                else
+	                {
+	                    System.out.println("Deck is empty");
+	                }
+	                break;
+	            case "size":
+	                System.out.println(d.size());
+	                break;
+	            case "isEmpty":
+	                System.out.println(d.isEmty());
+	                break;
+	            default:
+	                break;
 
             }
         }
