@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 class Deque1 
 {
 	int size;
@@ -10,8 +9,8 @@ class Deque1
 		Node next;
 		Node(String d,Node link)
 		{
-			data=d;
-			next=link;
+			data = d;
+			next = link;
 		}
 	}
 	Deque1()
@@ -22,7 +21,7 @@ class Deque1
 	}
 	void pushLeft(String s)
 	{
-		if(front==null)
+		if(front == null)
 		{
 			front=new Node(s,null);
 			rear=front;
@@ -36,7 +35,7 @@ class Deque1
 	}
 	void pushRight(String s)
 	{
-		if(rear==null)
+		if(rear ==  null)
 		{
 			rear=new Node(s,null);
 			front=rear;
@@ -51,7 +50,7 @@ class Deque1
 	}
 	void popLeft()
 	{
-		if(front!=null)
+		if(front != null)
 		{
 			Node pn=rear;
 			rear=rear.next;
@@ -62,7 +61,7 @@ class Deque1
 	}
 	void popRight()
 	{
-		if(rear!=null)
+		if(rear != null)
 		{
 			Node temp=null;
 			Node pn=rear;
@@ -91,7 +90,7 @@ class Deque1
 	{
 		if (size!=0) 
         {
-            String s1="";
+            String s1= "";
             Node temp=front;
             while (temp!=null) 
             {
