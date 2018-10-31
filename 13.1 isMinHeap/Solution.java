@@ -1,3 +1,5 @@
+
+
 import java.util.Scanner;
 
 class Heap
@@ -56,7 +58,7 @@ class Heap
 		return s[j].compareTo(s[i])<=0;
 	}
 }
-class Solution 
+public class Solution 
 {
 	public static void main(String[] args)
 	{
@@ -92,8 +94,13 @@ class Solution
 					String z2=sc.next();
 					String z3[]=null;
 					z3=z2.split(",");
+					Double[] d=new Double[z3.length];
+					for(int l=0;l<z3.length;i++)
+					{
+						d[l]=Double.parseDouble(z3[l]);
+					}
 					Heap h=new Heap();
-					System.out.println(h.Min_heap(1, z3));
+					System.out.println(h.Min_num(1, d));
 				}
 				break;
 		}
