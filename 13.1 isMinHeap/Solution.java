@@ -97,7 +97,8 @@ public class Solution
 					Double[] d=new Double[z3.length];
 					for(int l=0;l<z3.length;i++)
 					{
-						d[l]=Double.parseDouble(z3[l]);
+						String z4=z3[l];
+						d[l]=Double.parseDouble(z4);
 					}
 					Heap h=new Heap();
 					System.out.println(h.Min_num(1, d));
