@@ -1,5 +1,3 @@
-package module12;
-
 import java.util.Scanner;
 
 class Heap
@@ -58,7 +56,7 @@ class Heap
 		return s[j].compareTo(s[i])<=0;
 	}
 }
-public class Solution 
+class Solution 
 {
 	public static void main(String[] args)
 	{
